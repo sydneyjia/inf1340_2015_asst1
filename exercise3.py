@@ -25,8 +25,28 @@ def diagnose_car():
     Errors:
 
     """
-
-    print("The battery cables may be damaged. Replace cables and try again.")
-
-
-diagnose_car()
+answer1  =raw_input("Is the car silent when you turn the key:")
+if(answer1 == "Y"):
+  answer2 = raw_input("Are the battery terminal corroded:")
+  if(answer2 == "Y"):
+    print("clean terminals")
+  else:
+    print("Replace cables")
+else:
+  answer3 = raw_input("Does it make a clicking noice?")
+  if(answer3 == "Y"):
+      print("replace the battery")
+  else:
+      answer4 = raw_input("Does it crank u but fail to start?")
+      if(answer4 =="Y"):
+          print("check the spark plug connection!")
+      else:
+          answer5 = raw_input("Does the engine start and then die?")
+          if(answer5 == "Y"):
+              answer6 = raw_input("Does your car have fuel injection?")
+              if(raw_input =="y"):
+                  print("Get it in for service")
+              else:
+                  print("Check the choke is opening and closing")
+          else:
+              print("Unable to identify the problem")
